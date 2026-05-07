@@ -110,7 +110,7 @@ section { padding: clamp(3rem, 8vw, 6rem) 0; }
 /* ============================================================
    NAVIGATION
 ============================================================ */
-nav {
+#nav {
   position: fixed;
   top: 0; left: 0; right: 0;
   z-index: 100;
@@ -121,7 +121,7 @@ nav {
   transition: box-shadow 0.3s;
 }
 
-nav.scrolled { box-shadow: var(--shadow); }
+#nav.scrolled { box-shadow: var(--shadow); }
 
 .nav-inner {
   display: flex;
@@ -1253,3 +1253,519 @@ footer {
 ============================================================ */
 .tekst-center { text-align: center; }
 .tekst-center .sektion-intro { margin-left: auto; margin-right: auto; }
+
+/* ============================================================
+   COOKIE SAMTYKKE BANNER
+============================================================ */
+.cookie-banner {
+  position: fixed;
+  bottom: 0; left: 0; right: 0;
+  z-index: 200;
+  background: var(--tekst-mork);
+  color: rgba(255,255,255,0.85);
+  padding: 1.25rem 0;
+  transform: translateY(100%);
+  transition: transform 0.4s ease;
+  box-shadow: 0 -4px 24px rgba(0,0,0,0.18);
+}
+
+.cookie-banner.synlig { transform: translateY(0); }
+
+.cookie-banner-indre {
+  max-width: var(--max-w);
+  margin: 0 auto;
+  padding: 0 var(--gap);
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.cookie-banner-titel {
+  font-family: var(--font-serif);
+  color: var(--hvid);
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 0.3rem;
+}
+
+.cookie-banner-tekst p:not(.cookie-banner-titel) {
+  font-size: 0.85rem;
+  color: rgba(255,255,255,0.65);
+  margin: 0;
+}
+
+.cookie-banner-tekst a {
+  color: var(--lys-coral);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.cookie-banner-knapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.cookie-accepter {
+  background: var(--groen);
+  color: var(--hvid);
+  border: none;
+  padding: 0.6rem 1.25rem;
+  border-radius: 999px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  font-family: var(--font-sans);
+  cursor: pointer;
+  transition: background 0.2s;
+  white-space: nowrap;
+}
+
+.cookie-accepter:hover { background: #7a9471; }
+
+.cookie-afvis {
+  background: transparent;
+  color: rgba(255,255,255,0.8);
+  border: 2px solid rgba(255,255,255,0.35);
+  padding: 0.6rem 1.25rem;
+  border-radius: 999px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  font-family: var(--font-sans);
+  cursor: pointer;
+  transition: border-color 0.2s, background 0.2s;
+  white-space: nowrap;
+}
+
+.cookie-afvis:hover { border-color: rgba(255,255,255,0.6); background: rgba(255,255,255,0.08); }
+
+.cookie-tilpas {
+  background: transparent;
+  color: rgba(255,255,255,0.55);
+  border: none;
+  padding: 0.6rem 0.4rem;
+  font-size: 0.85rem;
+  font-family: var(--font-sans);
+  cursor: pointer;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  transition: color 0.2s;
+  white-space: nowrap;
+}
+
+.cookie-tilpas:hover { color: var(--hvid); }
+
+/* Tilpas-panel */
+.cookie-tilpas-panel {
+  display: none;
+  border-top: 1px solid rgba(255,255,255,0.12);
+  padding-top: 1rem;
+  margin-top: 0.25rem;
+}
+
+.cookie-tilpas-panel.synlig { display: block; }
+
+.cookie-kategori {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.75rem 0;
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+
+.cookie-kategori:last-child { border-bottom: none; }
+
+.cookie-kategori-info { flex: 1; }
+
+.cookie-kategori-navn {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--hvid);
+  display: block;
+  margin-bottom: 0.2rem;
+}
+
+.cookie-kategori-beskrivelse {
+  font-size: 0.8rem;
+  color: rgba(255,255,255,0.55);
+}
+
+/* Toggle switch */
+.cookie-toggle {
+  position: relative;
+  width: 42px;
+  height: 24px;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.cookie-toggle input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+  position: absolute;
+}
+
+.cookie-toggle-slider {
+  position: absolute;
+  inset: 0;
+  background: rgba(255,255,255,0.25);
+  border-radius: 24px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.cookie-toggle-slider::before {
+  content: '';
+  position: absolute;
+  width: 18px; height: 18px;
+  left: 3px; top: 3px;
+  background: var(--hvid);
+  border-radius: 50%;
+  transition: transform 0.2s;
+}
+
+.cookie-toggle input:checked + .cookie-toggle-slider { background: var(--groen); }
+.cookie-toggle input:checked + .cookie-toggle-slider::before { transform: translateX(18px); }
+.cookie-toggle input:disabled + .cookie-toggle-slider { cursor: not-allowed; opacity: 0.7; }
+
+.cookie-gem-valg {
+  background: var(--coral);
+  color: var(--hvid);
+  border: none;
+  padding: 0.6rem 1.4rem;
+  border-radius: 999px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  font-family: var(--font-sans);
+  cursor: pointer;
+  margin-top: 1rem;
+  transition: background 0.2s;
+}
+
+.cookie-gem-valg:hover { background: #c06a55; }
+
+@media (min-width: 768px) {
+  .cookie-banner-indre {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+
+/* ============================================================
+   POLITIKSIDER – HERO
+============================================================ */
+.politik-hero {
+  background: linear-gradient(150deg, #f7ede0 0%, #fdf6ee 45%, var(--baggrund) 100%);
+  padding: clamp(6rem, 12vw, 9rem) 0 clamp(2rem, 5vw, 3.5rem);
+}
+
+.politik-hero h1 { margin-bottom: 0.75rem; }
+
+/* ============================================================
+   POLITIKSIDER – INDHOLD
+============================================================ */
+.politik-indhold {
+  background: var(--hvid);
+  padding: clamp(2.5rem, 6vw, 5rem) 0;
+}
+
+.politik-artikel {
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+.politik-artikel h2 {
+  font-size: clamp(1.15rem, 2.5vw, 1.5rem);
+  margin: 2.5rem 0 0.75rem;
+  color: var(--tekst-mork);
+  padding-bottom: 0.4rem;
+  border-bottom: 2px solid var(--border);
+}
+
+.politik-artikel h2:first-child { margin-top: 0; }
+
+.politik-artikel p {
+  margin-bottom: 1rem;
+  font-size: 0.97rem;
+  line-height: 1.8;
+  color: var(--tekst-graa);
+}
+
+.politik-artikel ul,
+.politik-artikel ol {
+  margin: 0.25rem 0 1.25rem 1.5rem;
+}
+
+.politik-artikel ul { list-style: disc; }
+.politik-artikel ol { list-style: decimal; }
+
+.politik-artikel li {
+  margin-bottom: 0.45rem;
+  font-size: 0.97rem;
+  line-height: 1.7;
+  color: var(--tekst-graa);
+}
+
+.politik-artikel a {
+  color: var(--blaa);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.politik-artikel a:hover { color: var(--coral); }
+
+.politik-artikel strong {
+  color: var(--tekst-mork);
+  font-weight: 600;
+}
+
+.politik-boks {
+  background: var(--baggrund);
+  border: 1px solid var(--border);
+  border-left: 4px solid var(--blaa);
+  border-radius: 0 var(--radius) var(--radius) 0;
+  padding: 1.25rem 1.5rem;
+  margin: 1.25rem 0 1.5rem;
+}
+
+.politik-boks p {
+  margin: 0;
+  font-size: 0.92rem;
+}
+
+.politik-boks p + p { margin-top: 0.5rem; }
+
+.politik-kontakt-kort {
+  background: var(--baggrund);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 1.5rem;
+  margin-top: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.politik-kontakt-item {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-size: 0.95rem;
+  color: var(--tekst-graa);
+}
+
+.politik-kontakt-item strong { color: var(--tekst-mork); min-width: 60px; display: inline-block; }
+
+.politik-kontakt-item a { color: var(--blaa); }
+
+.politik-opdateret {
+  margin-top: 3rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--border);
+  font-size: 0.83rem;
+  color: rgba(107,101,96,0.65);
+  font-style: italic;
+}
+
+/* ============================================================
+   EN DAG I DAGPLEJEN – TIDSLINJE
+============================================================ */
+.dagsprogram {
+  background: linear-gradient(175deg, #f0ece4 0%, var(--baggrund) 100%);
+}
+
+.tidslinje {
+  position: relative;
+  max-width: 680px;
+  margin: 0 auto;
+}
+
+/* Gradient linje */
+.tidslinje::before {
+  content: '';
+  position: absolute;
+  left: 6px;
+  top: 20px;
+  bottom: 20px;
+  width: 2px;
+  background: linear-gradient(to bottom,
+    var(--groen) 0%,
+    var(--blaa) 40%,
+    var(--coral) 75%,
+    var(--brun) 100%
+  );
+  border-radius: 1px;
+}
+
+.tidslinje-item {
+  position: relative;
+  padding-left: 2.5rem;
+  padding-bottom: 2rem;
+}
+
+.tidslinje-item:last-child { padding-bottom: 0; }
+
+/* Prik på linjen */
+.tidslinje-prik {
+  position: absolute;
+  left: 0;
+  top: 1.2rem;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  border: 3px solid var(--baggrund);
+  z-index: 1;
+}
+
+.tidslinje-prik.groen {
+  background: var(--groen);
+  box-shadow: 0 0 0 2px rgba(143,168,130,0.45);
+}
+.tidslinje-prik.blaa {
+  background: var(--blaa);
+  box-shadow: 0 0 0 2px rgba(106,155,181,0.45);
+}
+.tidslinje-prik.coral {
+  background: var(--coral);
+  box-shadow: 0 0 0 2px rgba(212,128,106,0.45);
+}
+.tidslinje-prik.brun {
+  background: var(--brun);
+  box-shadow: 0 0 0 2px rgba(184,149,106,0.45);
+}
+
+/* Kort */
+.tidslinje-kort {
+  background: var(--hvid);
+  border-radius: var(--radius-lg);
+  padding: 1.25rem 1.5rem;
+  border: 1px solid var(--border);
+  box-shadow: 0 2px 12px rgba(0,0,0,0.05);
+  transition: box-shadow 0.2s, transform 0.2s;
+}
+
+.tidslinje-kort:hover {
+  box-shadow: var(--shadow);
+  transform: translateX(4px);
+}
+
+.tidslinje-meta {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  margin-bottom: 0.6rem;
+}
+
+.tidslinje-tid {
+  font-family: var(--font-sans);
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: var(--tekst-graa);
+  background: var(--baggrund);
+  border: 1px solid var(--border);
+  padding: 0.2rem 0.65rem;
+  border-radius: 999px;
+  letter-spacing: 0.06em;
+}
+
+.tidslinje-ikon {
+  width: 30px;
+  height: 30px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.tidslinje-ikon svg { width: 15px; height: 15px; stroke-width: 2; }
+
+.tidslinje-ikon.groen { background: rgba(143,168,130,0.18); color: var(--groen); }
+.tidslinje-ikon.blaa  { background: rgba(106,155,181,0.15); color: var(--blaa); }
+.tidslinje-ikon.coral { background: rgba(212,128,106,0.15); color: var(--coral); }
+.tidslinje-ikon.brun  { background: rgba(184,149,106,0.15); color: var(--brun); }
+
+.tidslinje-kort h3 {
+  font-size: 1rem;
+  margin-bottom: 0.3rem;
+  color: var(--tekst-mork);
+}
+
+.tidslinje-kort p { font-size: 0.88rem; line-height: 1.65; }
+
+/* ============================================================
+   SPØRGSMÅL OG SVAR (FAQ)
+============================================================ */
+.faq {
+  background: var(--hvid);
+}
+
+.faq-liste {
+  max-width: 720px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.faq-item {
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  background: var(--baggrund);
+  transition: box-shadow 0.2s;
+}
+
+.faq-item[open] {
+  box-shadow: var(--shadow);
+}
+
+.faq-spoergsmaal {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.2rem 1.5rem;
+  font-family: var(--font-sans);
+  font-size: 0.97rem;
+  font-weight: 600;
+  color: var(--tekst-mork);
+  cursor: pointer;
+  gap: 1rem;
+  user-select: none;
+  transition: background 0.2s;
+}
+
+.faq-spoergsmaal:hover { background: #ede8de; }
+.faq-spoergsmaal::-webkit-details-marker { display: none; }
+.faq-spoergsmaal::marker { display: none; }
+
+.faq-spoergsmaal::after {
+  content: '+';
+  font-size: 1.5rem;
+  font-weight: 300;
+  color: var(--coral);
+  flex-shrink: 0;
+  line-height: 1;
+  transition: transform 0.25s ease;
+}
+
+.faq-item[open] .faq-spoergsmaal::after {
+  transform: rotate(45deg);
+}
+
+.faq-svar {
+  padding: 1.25rem 1.5rem;
+  border-top: 1px solid var(--border);
+  background: var(--hvid);
+}
+
+.faq-svar p {
+  font-size: 0.95rem;
+  line-height: 1.78;
+  margin: 0;
+}
