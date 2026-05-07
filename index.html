@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Glæde og Vækst Pasning – privat dagpleje i Bispebjerg. Kærlig, erfaren og godkendt børnepasser med over 17 års erfaring." />
+  <title>Glæde og Vækst Pasning – Privat dagpleje i Bispebjerg</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+
+  <!-- Lucide ikoner -->
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="style.css" />
+
+</head>
+
+<body>
+
+  <!-- ============================================================
+       NAVIGATION
+  ============================================================ -->
+  <nav id="nav" role="navigation" aria-label="Hovedmenu">
+    <div class="nav-inner">
+      <a href="#top" class="nav-logo" aria-label="Glæde og Vækst Pasning – tilbage til toppen">
+        <img src="assests/logo.png" alt="Glæde og Vækst Pasning logo" />
+        <div class="nav-logo-tekst">
+          Glæde og Vækst
+          <span>Privat dagpleje</span>
+        </div>
+      </a>
+
+      <ul class="nav-links" role="list">
+        <li><a href="#om">Om Elham</a></li>
+        <li><a href="#hverdagen">Hverdagen</a></li>
+        <li><a href="#praktisk">Praktisk</a></li>
+        <li><a href="#anbefalinger">Anbefalinger</a></li>
+        <li><a href="#kontakt" class="nav-cta">Kontakt</a></li>
+      </ul>
+
+      <button class="nav-hamburger" id="hamburger" aria-label="Åbn menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+
+    <div class="nav-mobil" id="nav-mobil" role="menu">
+      <a href="#om" role="menuitem">Om Elham</a>
+      <a href="#hverdagen" role="menuitem">Hverdagen</a>
+      <a href="#praktisk" role="menuitem">Praktisk info</a>
+      <a href="#anbefalinger" role="menuitem">Anbefalinger</a>
+      <a href="#kontakt" role="menuitem">Kontakt</a>
+    </div>
+  </nav>
+
+  <!-- ============================================================
+       HERO
+  ============================================================ -->
+  <section class="hero" id="top">
+    <div class="container">
+      <div class="hero-indre">
+        <div class="hero-tekst">
+          <div class="hero-badge" aria-label="Ledige pladser">Ledige pladser nu</div>
+          <h1>Et trygt hjem<br />for dit <em>lille barn</em></h1>
+          <p class="hero-beskrivelse">
+            Privat dagpleje i Bispebjerg med varme, nærvær og over 17 års erfaring.
+            Her vokser børn op med leg, omsorg og masser af glæde – hver eneste dag.
+          </p>
+          <div class="hero-knapper">
+            <a href="#kontakt" class="knap-primær">Hør mere</a>
+            <a href="#hverdagen" class="knap-sekundær">Se hverdagen</a>
+          </div>
+          <div class="hero-statistik" aria-label="Nøgletal">
+            <div class="stat">
+              <span class="stat-tal">17+</span>
+              <span class="stat-label">Års erfaring</span>
+            </div>
+            <div class="stat">
+              <span class="stat-tal">2</span>
+              <span class="stat-label">Ledige pladser</span>
+            </div>
+            <div class="stat">
+              <span class="stat-tal">100%</span>
+              <span class="stat-label">Godkendt</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-media">
+          <!-- Stort primært billede -->
+          <img
+            class="hero-hoved-billede"
+            src="assests/aktivitet-01.jpeg"
+            alt="Glæde og tryghed i dagplejen hos Glæde og Vækst Pasning"
+          />
+
+          <!-- Lille overlappende billede -->
+          <img
+            class="hero-lille-billede"
+            src="assests/aktivitet-05.jpeg"
+            alt="Kreativ leg og aktivitet i dagplejen"
+            aria-hidden="true"
+          />
+
+          <!-- Flydende ledige pladser-kort -->
+          <div class="hero-plads-kort" aria-label="Ledige pladser">
+            <p class="hero-plads-kort-label">Ledige pladser</p>
+            <div class="hero-plads-maaneder">
+              <div class="hero-plads-maaned">
+                <span class="hero-plads-prik"></span>
+                Maj 2025
+              </div>
+              <div class="hero-plads-maaned">
+                <span class="hero-plads-prik"></span>
+                Juni 2025
+              </div>
+            </div>
+          </div>
+
+          <!-- Flydende erfarings-badge -->
+          <div class="hero-erfaring-badge" aria-hidden="true">
+            <div class="hero-erfaring-tal">17+</div>
+            <div class="hero-erfaring-tekst">Års erfaring</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       OM ELHAM
+  ============================================================ -->
+  <section class="om-elham" id="om">
+    <div class="container">
+      <div class="om-grid">
+        <div class="om-billede-wrapper fade-op">
+          <img
+            src="assests/aktivitet-04.jpeg"
+            alt="Kærlig og nærværende stemning i dagplejen"
+          />
+        </div>
+
+        <div class="om-indhold">
+          <p class="sektion-label">Om mig</p>
+          <h2>Hej, jeg er Elham</h2>
+          <p>
+            Jeg er privat dagplejer i Bispebjerg og har passet børn med kærlighed og engagement
+            i over <strong>17 år</strong>. Jeg er selv mor til tvillinger, så jeg ved alt om
+            den tillid det kræver at aflevere sit allerkæreste til en anden.
+          </p>
+          <p>
+            Jeg er godkendt børnepasser og lægger stor vægt på et trygt, hjemligt miljø, hvor
+            hvert barn ses og høres. Hos mig er der plads til nysgerrighed, ro og masser af leg.
+          </p>
+          <p>
+            Min hverdag er fyldt med aktiviteter, frisk luft, hjemmelavet mad og nærværende
+            omsorg – altid med dit barns trivsel og udvikling i centrum.
+          </p>
+
+          <div class="om-kendetegn" role="list">
+            <div class="kendetegn-item fade-op" role="listitem">
+              <div class="kendetegn-ikon" aria-hidden="true">
+                <i data-lucide="shield-check"></i>
+              </div>
+              <span class="kendetegn-tekst">Godkendt børnepasser</span>
+            </div>
+            <div class="kendetegn-item fade-op" role="listitem">
+              <div class="kendetegn-ikon" aria-hidden="true">
+                <i data-lucide="star"></i>
+              </div>
+              <span class="kendetegn-tekst">17+ års erfaring</span>
+            </div>
+            <div class="kendetegn-item fade-op" role="listitem">
+              <div class="kendetegn-ikon" aria-hidden="true">
+                <i data-lucide="utensils"></i>
+              </div>
+              <span class="kendetegn-tekst">Hjemmelavet mad</span>
+            </div>
+            <div class="kendetegn-item fade-op" role="listitem">
+              <div class="kendetegn-ikon" aria-hidden="true">
+                <i data-lucide="home"></i>
+              </div>
+              <span class="kendetegn-tekst">Trygt hjemligt miljø</span>
+            </div>
+            <div class="kendetegn-item fade-op" role="listitem">
+              <div class="kendetegn-ikon" aria-hidden="true">
+                <i data-lucide="tree-pine"></i>
+              </div>
+              <span class="kendetegn-tekst">Frisk luft og natur</span>
+            </div>
+            <div class="kendetegn-item fade-op" role="listitem">
+              <div class="kendetegn-ikon" aria-hidden="true">
+                <i data-lucide="palette"></i>
+              </div>
+              <span class="kendetegn-tekst">Kreative aktiviteter</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       HVERDAGEN
+  ============================================================ -->
+  <section class="hverdagen" id="hverdagen">
+    <div class="container">
+      <div class="sektion-intro fade-op">
+        <p class="sektion-label">Hverdagen</p>
+        <h2>En dag fyldt med glæde og oplevelser</h2>
+        <p>
+          Hos Glæde og Vækst er ingen dage ens. Vi veksler mellem trygge rutiner og
+          spændende aktiviteter – altid tilpasset børnenes alder og behov.
+        </p>
+      </div>
+
+      <div class="hverdagen-indre">
+        <div>
+          <ul class="aktiviteter-liste" role="list">
+            <li class="aktivitet-kort fade-op" role="listitem">
+              <div class="aktivitet-ikon" aria-hidden="true">
+                <i data-lucide="palette"></i>
+              </div>
+              <div class="aktivitet-tekst">
+                <h3>Kreativ leg og kunst</h3>
+                <p>Tegning, maleri, klippe-klistre og sanselige materialer stimulerer fantasi og finmotorik.</p>
+              </div>
+            </li>
+            <li class="aktivitet-kort fade-op" role="listitem">
+              <div class="aktivitet-ikon" aria-hidden="true">
+                <i data-lucide="tree-pine"></i>
+              </div>
+              <div class="aktivitet-tekst">
+                <h3>Udeliv og natur</h3>
+                <p>Daglige ture til legeplads, have og nærliggende park. Frisk luft og bevægelse hver dag.</p>
+              </div>
+            </li>
+            <li class="aktivitet-kort fade-op" role="listitem">
+              <div class="aktivitet-ikon" aria-hidden="true">
+                <i data-lucide="utensils"></i>
+              </div>
+              <div class="aktivitet-tekst">
+                <h3>Hjemmelavet mad</h3>
+                <p>Nærende og velsmagende morgenmad og frokost tilberedt fra bunden med friske råvarer.</p>
+              </div>
+            </li>
+            <li class="aktivitet-kort fade-op" role="listitem">
+              <div class="aktivitet-ikon" aria-hidden="true">
+                <i data-lucide="book-open"></i>
+              </div>
+              <div class="aktivitet-tekst">
+                <h3>Historier og sang</h3>
+                <p>Højtlæsning, sanglege og rim styrker sproget og skaber fælles hygge og tryghed.</p>
+              </div>
+            </li>
+            <li class="aktivitet-kort fade-op" role="listitem">
+              <div class="aktivitet-ikon" aria-hidden="true">
+                <i data-lucide="puzzle"></i>
+              </div>
+              <div class="aktivitet-tekst">
+                <h3>Leg og social læring</h3>
+                <p>Struktureret og fri leg, der udvikler sociale kompetencer, samarbejde og empati.</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <div>
+          <p class="galleri-titel">Fra hverdagen</p>
+
+          <div class="galleri-grid" id="galleri" role="list" aria-label="Fotogalleri fra hverdagen">
+            <img src="assests/aktivitet-05.jpeg" alt="Barn leger aktivt i dagplejen" role="listitem" tabindex="0" />
+            <img src="assests/aktivitet-06.jpeg" alt="Kreativ aktivitet med farverige materialer" role="listitem" tabindex="0" />
+            <img src="assests/aktivitet-07.jpeg" alt="Udeliv og frisk luft på legepladsen" role="listitem" tabindex="0" />
+            <img src="assests/aktivitet-08.jpeg" alt="Hyggelig samling og leg i dagplejen" role="listitem" tabindex="0" />
+            <img src="assests/aktivitet-09.jpeg" alt="Naturaktivitet og sanseleg" role="listitem" tabindex="0" />
+            <img src="assests/aktivitet-10.jpeg" alt="Spændende leg med klodser og byggematerialer" role="listitem" tabindex="0" />
+          </div>
+
+          <div class="galleri-ekstra" id="galleri-ekstra" aria-label="Flere billeder fra hverdagen">
+            <img src="assests/aktivitet-11.jpeg" alt="Kreativ leg og tegning" tabindex="0" />
+            <img src="assests/aktivitet-12.jpeg" alt="Udforskning og nysgerrighed i leg" tabindex="0" />
+            <img src="assests/aktivitet-13.jpeg" alt="Sjov og aktiv udeleg" tabindex="0" />
+            <img src="assests/aktivitet-14.jpeg" alt="Fælles aktivitet og samvær" tabindex="0" />
+            <img src="assests/aktivitet-15.jpeg" alt="Motorisk leg og bevægelse" tabindex="0" />
+            <img src="assests/aktivitet-16.jpeg" alt="Rolig og koncentreret leg" tabindex="0" />
+            <img src="assests/aktivitet-17.jpeg" alt="Glæde og latter under leg" tabindex="0" />
+            <img src="assests/aktivitet-18.jpeg" alt="Sanselig og kreativ aktivitet" tabindex="0" />
+            <img src="assests/aktivitet-19.jpeg" alt="Natur og udeliv i nærområdet" tabindex="0" />
+            <img src="assests/aktivitet-20.jpeg" alt="Aktiv og oplevelsesrig dag i dagplejen" tabindex="0" />
+          </div>
+
+          <div class="galleri-vis-mere">
+            <button id="vis-mere-knap" aria-expanded="false" aria-controls="galleri-ekstra">
+              Vis alle billeder
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Lightbox -->
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Billedvisning">
+    <button class="lightbox-luk" id="lightbox-luk" aria-label="Luk billedvisning">&#x2715;</button>
+    <button class="lightbox-nav lightbox-forrige" id="lb-forrige" aria-label="Forrige billede">&#8249;</button>
+    <img class="lightbox-billede" id="lightbox-billede" src="" alt="" />
+    <button class="lightbox-nav lightbox-naeste" id="lb-naeste" aria-label="Næste billede">&#8250;</button>
+  </div>
+
+  <!-- ============================================================
+       PRAKTISK INFO
+  ============================================================ -->
+  <section class="praktisk" id="praktisk">
+    <div class="container">
+      <div class="sektion-intro fade-op">
+        <p class="sektion-label">Praktisk info</p>
+        <h2>Alt du skal vide</h2>
+        <p>Her finder du åbningstider, adresse og nyttige oplysninger om transport og tilskud.</p>
+      </div>
+
+      <div class="praktisk-grid">
+        <div class="info-kort fade-op">
+          <div class="info-kort-header">
+            <div class="info-ikon groen" aria-hidden="true">
+              <i data-lucide="clock"></i>
+            </div>
+            <h3>Åbningstider</h3>
+          </div>
+          <table class="aabning-tabel" aria-label="Åbningstider">
+            <tbody>
+              <tr>
+                <td>Mandag – torsdag</td>
+                <td>07:30 – 16:00</td>
+              </tr>
+              <tr>
+                <td>Fredag</td>
+                <td>07:30 – 15:30</td>
+              </tr>
+              <tr>
+                <td>Weekend og helligdage</td>
+                <td>Lukket</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="info-kort fade-op">
+          <div class="info-kort-header">
+            <div class="info-ikon blaa" aria-hidden="true">
+              <i data-lucide="map-pin"></i>
+            </div>
+            <h3>Adresse</h3>
+          </div>
+          <p class="adresse-tekst">
+            <strong>Bispebjerg Parkallé</strong>
+            København NV<br />
+            Tæt på Emdrup Torv<br />
+            og Emdrup Station
+          </p>
+        </div>
+
+        <div class="info-kort fade-op">
+          <div class="info-kort-header">
+            <div class="info-ikon coral" aria-hidden="true">
+              <i data-lucide="bus"></i>
+            </div>
+            <h3>Transport</h3>
+          </div>
+          <ul class="transport-liste" aria-label="Transportmuligheder">
+            <li class="transport-item">
+              <span class="transport-badge">4A</span>
+              <span>Kun 1 minut fra stoppested</span>
+            </li>
+            <li class="transport-item">
+              <span class="transport-badge">6A</span>
+              <span>Kun 1 minut fra stoppested</span>
+            </li>
+            <li class="transport-item">
+              <span class="transport-badge">Tog</span>
+              <span>Emdrup Station – kort gåtur</span>
+            </li>
+            <li class="transport-item">
+              <span class="transport-badge">Cykel</span>
+              <span>God cykelforbindelse fra Bispebjerg</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="info-kort fade-op">
+          <div class="info-kort-header">
+            <div class="info-ikon brun" aria-hidden="true">
+              <i data-lucide="badge-euro"></i>
+            </div>
+            <h3>Tilskud og betaling</h3>
+          </div>
+          <p class="pris-info">
+            Som privat dagplejer er du berettiget til <strong>fripladstilskud</strong> og
+            <strong>søskendetilskud</strong> fra kommunen.<br /><br />
+            Kontakt mig for at høre om de aktuelle priser og tilskudsmuligheder,
+            der passer til din families situation.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       LEDIGE PLADSER BANNER
+  ============================================================ -->
+  <div class="pladser-banner" role="complementary" aria-label="Ledige pladser">
+    <div class="container">
+      <div class="pladser-indre">
+        <div>
+          <h2>Der er stadig ledige pladser!</h2>
+          <p>Sikr din plads allerede i dag – der er kun 2 pladser tilbage.</p>
+          <div class="pladser-maaneder" aria-label="Ledige måneder">
+            <span class="plads-badge">1 plads – Maj 2025</span>
+            <span class="plads-badge">1 plads – Juni 2025</span>
+          </div>
+        </div>
+        <div class="pladser-knapper">
+          <a href="tel:+4542363474" class="knap-hvid" aria-label="Ring til Elham">
+            Ring nu
+          </a>
+          <a href="#kontakt" class="knap-hvid-outline">Skriv til mig</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============================================================
+       ANBEFALINGER
+  ============================================================ -->
+  <section class="anbefalinger" id="anbefalinger">
+    <div class="container">
+      <div class="sektion-intro tekst-center fade-op">
+        <p class="sektion-label">Hvad forældre siger</p>
+        <h2>Anbefalinger</h2>
+        <p>Ord fra familier der har haft deres barn hos Glæde og Vækst Pasning.</p>
+      </div>
+
+      <div class="anbefalinger-grid">
+        <article class="anbefaling-kort fade-op">
+          <p class="anbefaling-tekst">"Vi følte os trygge fra dag ét, og vores barn var glad for at være der hver dag."</p>
+          <div class="anbefaling-stjerner" aria-label="5 ud af 5 stjerner">★★★★★</div>
+        </article>
+        <article class="anbefaling-kort fade-op">
+          <p class="anbefaling-tekst">"Elham er en kærlig, stabil og nærværende børnepasser."</p>
+          <div class="anbefaling-stjerner" aria-label="5 ud af 5 stjerner">★★★★★</div>
+        </article>
+        <article class="anbefaling-kort fade-op">
+          <p class="anbefaling-tekst">"Vores barn udviklede sig meget positivt både socialt og motorisk."</p>
+          <div class="anbefaling-stjerner" aria-label="5 ud af 5 stjerner">★★★★★</div>
+        </article>
+        <article class="anbefaling-kort fade-op">
+          <p class="anbefaling-tekst">"Der er altid spændende aktiviteter, ture og kreative oplevelser."</p>
+          <div class="anbefaling-stjerner" aria-label="5 ud af 5 stjerner">★★★★★</div>
+        </article>
+        <article class="anbefaling-kort fade-op">
+          <p class="anbefaling-tekst">"Hun ser hvert barns behov og giver dem den opmærksomhed, de har brug for."</p>
+          <div class="anbefaling-stjerner" aria-label="5 ud af 5 stjerner">★★★★★</div>
+        </article>
+        <article class="anbefaling-kort fade-op">
+          <p class="anbefaling-tekst">"Vi har haft fuld tillid til hende gennem hele forløbet."</p>
+          <div class="anbefaling-stjerner" aria-label="5 ud af 5 stjerner">★★★★★</div>
+        </article>
+        <article class="anbefaling-kort fade-op">
+          <p class="anbefaling-tekst">"Et trygt og hjemligt miljø med masser af omsorg og glæde."</p>
+          <div class="anbefaling-stjerner" aria-label="5 ud af 5 stjerner">★★★★★</div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       KONTAKT
+  ============================================================ -->
+  <section class="kontakt" id="kontakt">
+    <div class="container">
+      <div class="kontakt-grid">
+        <div>
+          <p class="sektion-label">Kontakt</p>
+          <h2>Lad os tage en snak</h2>
+          <p style="margin-bottom:0.5rem;">
+            Er du nysgerrig på at høre mere om dagplejen, en ledig plads eller hverdagen hos
+            Glæde og Vækst? Tøv ikke med at række ud – jeg glæder mig til at høre fra dig.
+          </p>
+
+          <div class="kontakt-metoder">
+            <a href="tel:+4542363474" class="kontakt-link" aria-label="Ring til Elham på +45 42 36 34 74">
+              <div class="kontakt-link-ikon groen" aria-hidden="true">
+                <i data-lucide="phone"></i>
+              </div>
+              <div>
+                <span class="kontakt-link-label">Telefon</span>
+                <span class="kontakt-link-vaerdi">+45 42 36 34 74</span>
+              </div>
+            </a>
+            <a href="mailto:Elhama20111@hotmail.com" class="kontakt-link" aria-label="Send email til Elhama20111@hotmail.com">
+              <div class="kontakt-link-ikon blaa" aria-hidden="true">
+                <i data-lucide="mail"></i>
+              </div>
+              <div>
+                <span class="kontakt-link-label">Email</span>
+                <span class="kontakt-link-vaerdi">Elhama20111@hotmail.com</span>
+              </div>
+            </a>
+          </div>
+        </div>
+
+        <div class="kontakt-kort fade-op">
+          <h3>Send en besked</h3>
+          <p>Skriv til mig, og jeg vender tilbage hurtigst muligt.</p>
+          <form
+            action="mailto:Elhama20111@hotmail.com"
+            method="post"
+            enctype="text/plain"
+            aria-label="Kontaktformular"
+          >
+            <div class="form-gruppe">
+              <label for="navn">Dit navn</label>
+              <input type="text" id="navn" name="navn" placeholder="Fx Marie og Mikkel" required autocomplete="name" />
+            </div>
+            <div class="form-gruppe">
+              <label for="telefon">Telefon</label>
+              <input type="tel" id="telefon" name="telefon" placeholder="+45 xx xx xx xx" autocomplete="tel" />
+            </div>
+            <div class="form-gruppe">
+              <label for="besked">Besked</label>
+              <textarea id="besked" name="besked" placeholder="Fx alder på dit barn, hvornår I ønsker opstart..." required></textarea>
+            </div>
+            <button type="submit" class="form-send">Send besked</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       FOOTER
+  ============================================================ -->
+  <footer>
+    <div class="container">
+      <div class="footer-indre">
+        <div class="footer-logo">
+          <img src="assests/logo.png" alt="Glæde og Vækst Pasning logo" />
+        </div>
+        <div class="footer-tekst">
+          <strong>Glæde og Vækst Pasning</strong>
+          Bispebjerg Parkallé, tæt på Emdrup Torv og Emdrup Station<br />
+          +45 42 36 34 74 &middot; Elhama20111@hotmail.com
+        </div>
+        <nav class="footer-links" aria-label="Footernavigation">
+          <a href="#top">Toppen</a>
+          <a href="#om">Om Elham</a>
+          <a href="#hverdagen">Hverdagen</a>
+          <a href="#kontakt">Kontakt</a>
+        </nav>
+      </div>
+      <p class="footer-bund">
+        &copy; 2025 Glæde og Vækst Pasning &ndash; Privat dagpleje i Bispebjerg
+      </p>
+    </div>
+  </footer>
+
+  <!-- Javascript -->
+  <script src="script.js"></script>
+</body>
+</html>
