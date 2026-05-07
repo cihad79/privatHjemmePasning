@@ -1043,133 +1043,104 @@ section { padding: clamp(3rem, 8vw, 6rem) 0; }
 ============================================================ */
 .kontakt { background: var(--hvid); }
 
-.kontakt-grid {
+.kontakt .sektion-intro {
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.kontakt-cards {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 3rem;
-  align-items: start;
+  gap: 1rem;
+  max-width: 860px;
+  margin: 0 auto;
 }
 
-.kontakt-metoder {
+.kontakt-card {
   display: flex;
-  flex-direction: column;
-  gap: 1rem;
-  margin: 1.5rem 0;
-}
-
-.kontakt-link {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-  padding: 1.25rem 1.4rem;
+  align-items: flex-start;
+  gap: 1.25rem;
+  padding: 1.75rem;
   background: var(--baggrund);
   border: 2px solid var(--border);
   border-radius: var(--radius-lg);
   transition: border-color 0.2s, box-shadow 0.2s, transform 0.15s;
+  color: inherit;
 }
 
-.kontakt-link:hover {
+a.kontakt-card:hover {
   border-color: var(--coral);
-  box-shadow: 0 4px 20px rgba(212,128,106,0.15);
-  transform: translateY(-2px);
+  box-shadow: 0 4px 24px rgba(212,128,106,0.15);
+  transform: translateY(-3px);
 }
 
-.kontakt-link-ikon {
-  width: 48px; height: 48px;
-  border-radius: 12px;
+.kontakt-card-ikon {
+  width: 52px; height: 52px;
+  border-radius: 14px;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
 }
 
-.kontakt-link-ikon svg { width: 22px; height: 22px; stroke-width: 1.75; }
+.kontakt-card-ikon svg { width: 24px; height: 24px; stroke-width: 1.75; }
+.kontakt-card-ikon.groen { background: rgba(143,168,130,0.2);  color: var(--groen); }
+.kontakt-card-ikon.blaa  { background: rgba(106,155,181,0.15); color: var(--blaa); }
+.kontakt-card-ikon.coral { background: rgba(212,128,106,0.15); color: var(--coral); }
 
-.kontakt-link-ikon.groen { background: rgba(143,168,130,0.2); color: var(--groen); }
-.kontakt-link-ikon.blaa  { background: rgba(106,155,181,0.15); color: var(--blaa); }
-
-.kontakt-link-label {
+.kontakt-card-label {
   display: block;
-  font-size: 0.75rem;
-  color: var(--tekst-graa);
+  font-size: 0.72rem;
+  font-weight: 700;
   text-transform: uppercase;
-  letter-spacing: 0.08em;
-  font-weight: 600;
+  letter-spacing: 0.1em;
+  color: var(--tekst-graa);
+  margin-bottom: 0.3rem;
 }
 
-.kontakt-link-vaerdi {
+.kontakt-card-vaerdi {
   display: block;
   font-size: 1.05rem;
   font-weight: 600;
   color: var(--tekst-mork);
-  margin-top: 0.1rem;
+  margin-bottom: 0.25rem;
 }
 
-.kontakt-kort {
-  background: var(--baggrund);
-  border: 1px solid var(--border);
+.kontakt-card-note {
+  display: block;
+  font-size: 0.82rem;
+  color: var(--tekst-graa);
+}
+
+.kontakt-hjerte {
+  max-width: 540px;
+  margin: 2rem auto 0;
+  text-align: center;
+  padding: 1.75rem 2rem;
+  background: rgba(212,128,106,0.07);
   border-radius: var(--radius-lg);
-  padding: 2rem;
+  border: 1px solid rgba(212,128,106,0.2);
 }
 
-.kontakt-kort h3 { font-size: 1.2rem; margin-bottom: 0.5rem; }
-.kontakt-kort p { font-size: 0.92rem; margin-bottom: 1.5rem; }
-
-.form-gruppe {
-  display: flex;
-  flex-direction: column;
-  gap: 0.35rem;
-  margin-bottom: 1rem;
+.kontakt-hjerte [data-lucide] {
+  width: 26px; height: 26px;
+  color: var(--coral);
+  margin: 0 auto 0.75rem;
+  display: block;
 }
 
-.form-gruppe label {
-  font-size: 0.85rem;
-  font-weight: 600;
+.kontakt-hjerte p {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-size: 1.05rem;
+  line-height: 1.75;
   color: var(--tekst-mork);
+  margin: 0;
 }
 
-.form-gruppe input,
-.form-gruppe textarea {
-  padding: 0.75rem 1rem;
-  border: 2px solid var(--border);
-  border-radius: var(--radius);
-  font-size: 0.95rem;
-  font-family: var(--font-sans);
-  color: var(--tekst-mork);
-  background: var(--hvid);
-  transition: border-color 0.2s;
-  resize: vertical;
-}
-
-.form-gruppe input:focus,
-.form-gruppe textarea:focus {
-  outline: none;
-  border-color: var(--blaa);
-}
-
-.form-gruppe textarea { min-height: 110px; }
-
-.form-send {
-  width: 100%;
-  background: var(--coral);
-  color: var(--hvid);
-  padding: 0.85rem;
-  border: none;
-  border-radius: 999px;
-  font-size: 1rem;
-  font-weight: 600;
-  font-family: var(--font-sans);
-  cursor: pointer;
-  transition: background 0.2s, transform 0.15s;
-}
-
-.form-send:hover {
-  background: #c06a55;
-  transform: translateY(-1px);
-}
-
-@media (min-width: 900px) {
-  .kontakt-grid { grid-template-columns: 1fr 1fr; }
+@media (min-width: 640px) {
+  .kontakt-cards { grid-template-columns: repeat(3, 1fr); }
 }
 
 /* ============================================================
