@@ -252,30 +252,30 @@ section { padding: clamp(3rem, 8vw, 6rem) 0; }
   align-items: center;
   padding-top: clamp(5rem, 12vw, 8rem);
   padding-bottom: clamp(3rem, 6vw, 5rem);
-  background: linear-gradient(150deg, #f7ede0 0%, #fdf6ee 45%, var(--baggrund) 100%);
+  background: linear-gradient(140deg, #fae3cc 0%, #fdf0e0 28%, #fdf8f0 62%, var(--baggrund) 100%);
   overflow: hidden;
   position: relative;
 }
 
-/* Dekorativ blob øverst til højre */
+/* Stor varm blob øverst til højre */
 .hero::before {
   content: '';
   position: absolute;
-  top: -80px; right: -80px;
-  width: 480px; height: 480px;
+  top: -100px; right: -100px;
+  width: 600px; height: 600px;
   border-radius: 50%;
-  background: radial-gradient(circle, rgba(143,168,130,0.18) 0%, transparent 68%);
+  background: radial-gradient(circle, rgba(143,168,130,0.22) 0%, transparent 65%);
   pointer-events: none;
 }
 
-/* Dekorativ blob nederst til venstre */
+/* Coral blob nederst til venstre */
 .hero::after {
   content: '';
   position: absolute;
-  bottom: -100px; left: -100px;
-  width: 400px; height: 400px;
+  bottom: -120px; left: -80px;
+  width: 500px; height: 500px;
   border-radius: 50%;
-  background: radial-gradient(circle, rgba(212,128,106,0.1) 0%, transparent 65%);
+  background: radial-gradient(circle, rgba(212,128,106,0.14) 0%, transparent 62%);
   pointer-events: none;
 }
 
@@ -419,14 +419,28 @@ section { padding: clamp(3rem, 8vw, 6rem) 0; }
   position: relative;
 }
 
+/* Dekorativ farvet form bag billedet */
+.hero-media::before {
+  content: '';
+  position: absolute;
+  top: -18px; right: -18px;
+  bottom: 18px; left: 18px;
+  background: linear-gradient(145deg, rgba(143,168,130,0.28) 0%, rgba(106,155,181,0.16) 100%);
+  border-radius: 30px;
+  z-index: 0;
+}
+
 /* Stort primært billede */
 .hero-hoved-billede {
   width: 100%;
   aspect-ratio: 4/5;
   object-fit: cover;
-  border-radius: 24px;
+  object-position: center 40%;
+  border-radius: 26px;
   display: block;
-  box-shadow: var(--shadow-lg);
+  box-shadow: 0 28px 70px rgba(0,0,0,0.18), 0 6px 20px rgba(0,0,0,0.08);
+  position: relative;
+  z-index: 1;
 }
 
 /* Lille overlappende billede nederst til venstre */
@@ -434,12 +448,13 @@ section { padding: clamp(3rem, 8vw, 6rem) 0; }
   position: absolute;
   bottom: -1.5rem;
   left: -1.5rem;
-  width: 42%;
+  width: 44%;
   aspect-ratio: 1;
   object-fit: cover;
-  border-radius: 18px;
-  border: 4px solid var(--baggrund);
-  box-shadow: var(--shadow-lg);
+  border-radius: 20px;
+  border: 5px solid var(--baggrund);
+  box-shadow: 0 12px 40px rgba(0,0,0,0.16);
+  z-index: 2;
 }
 
 /* Flydende "Ledige pladser" kort øverst til højre */
@@ -448,10 +463,11 @@ section { padding: clamp(3rem, 8vw, 6rem) 0; }
   top: 1.5rem;
   right: -1rem;
   background: var(--hvid);
-  border-radius: 16px;
+  border-radius: 18px;
   padding: 1rem 1.25rem;
-  box-shadow: 0 8px 32px rgba(0,0,0,0.12);
-  min-width: 160px;
+  box-shadow: 0 12px 40px rgba(0,0,0,0.14);
+  min-width: 190px;
+  z-index: 2;
 }
 
 .hero-plads-kort-label {
@@ -490,31 +506,33 @@ section { padding: clamp(3rem, 8vw, 6rem) 0; }
   position: absolute;
   bottom: 2.5rem;
   right: -0.5rem;
-  background: var(--coral);
+  background: linear-gradient(135deg, var(--coral) 0%, #c96a52 100%);
   color: var(--hvid);
-  border-radius: 14px;
-  padding: 0.75rem 1rem;
-  box-shadow: 0 6px 24px rgba(212,128,106,0.4);
+  border-radius: 16px;
+  padding: 0.9rem 1.2rem;
+  box-shadow: 0 10px 32px rgba(212,128,106,0.5);
   text-align: center;
+  z-index: 2;
 }
 
 .hero-erfaring-tal {
   font-family: var(--font-serif);
-  font-size: 1.6rem;
+  font-size: 1.8rem;
   font-weight: 600;
   line-height: 1;
 }
 
 .hero-erfaring-tekst {
-  font-size: 0.7rem;
-  font-weight: 600;
+  font-size: 0.68rem;
+  font-weight: 700;
   text-transform: uppercase;
-  letter-spacing: 0.06em;
-  opacity: 0.9;
-  margin-top: 0.2rem;
+  letter-spacing: 0.08em;
+  opacity: 0.92;
+  margin-top: 0.25rem;
 }
 
 @media (max-width: 899px) {
+  .hero-media::before { display: none; }
   .hero-lille-billede { left: -0.75rem; bottom: -0.75rem; border-width: 3px; }
   .hero-plads-kort { right: 0.5rem; top: 0.75rem; }
   .hero-erfaring-badge { right: 0.5rem; }
