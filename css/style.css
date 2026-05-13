@@ -193,6 +193,22 @@ section { padding: clamp(3rem, 8vw, 6rem) 0; }
   transform: translateY(-1px);
 }
 
+.nav-ring {
+  display: none;
+  background: var(--groen);
+  color: var(--hvid) !important;
+  padding: 0.5rem 1.1rem;
+  border-radius: 999px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  transition: background 0.2s, transform 0.15s;
+}
+
+.nav-ring:hover {
+  background: #6f8f63;
+  transform: translateY(-1px);
+}
+
 .nav-hamburger {
   background: none;
   border: none;
@@ -240,6 +256,7 @@ section { padding: clamp(3rem, 8vw, 6rem) 0; }
 @media (min-width: 768px) {
   .nav-links { display: flex; }
   .nav-cta { display: inline-block; }
+  .nav-ring { display: inline-block; }
   .nav-hamburger { display: none; }
 }
 

@@ -38,6 +38,40 @@
   <meta property="og:locale" content="da_DK" />
   <meta property="og:site_name" content="Glæde og Vækst Pasning" />
 
+  <!-- Schema markup – LocalBusiness / ChildCare -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ChildCare",
+    "name": "Glæde og Vækst Pasning",
+    "description": "Privat pasningsordning i Bispebjerg med over 18 års erfaring. Kærlig, godkendt og med plads til op til 4 børn.",
+    "url": "https://glaedeogvaekstpasning.dk/",
+    "telephone": "+4542363474",
+    "email": "Elhama20111@hotmail.com",
+    "founder": { "@type": "Person", "name": "Elham" },
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Bispebjerg Parkallé 100",
+      "addressLocality": "København NV",
+      "postalCode": "2400",
+      "addressCountry": "DK"
+    },
+    "openingHoursSpecification": [
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"],
+        "opens": "07:00",
+        "closes": "17:00"
+      }
+    ],
+    "priceRange": "$$",
+    "areaServed": {
+      "@type": "City",
+      "name": "København"
+    }
+  }
+  </script>
+
 </head>
 
 <body>
@@ -48,7 +82,7 @@
   <nav id="nav" role="navigation" aria-label="Hovedmenu">
     <div class="nav-inner">
       <a href="#top" class="nav-logo" aria-label="Glæde og Vækst Pasning – tilbage til toppen">
-        <img src="assests/logo.png" alt="Glæde og Vækst Pasning logo" />
+        <img src="assets/img/logo.png" alt="Glæde og Vækst Pasning logo" />
         <div class="nav-logo-tekst">
           Glæde og Vækst
           <span>Privat pasningsordning</span>
@@ -62,6 +96,7 @@
         <li><a href="#praktisk">Praktisk</a></li>
         <li><a href="#anbefalinger">Anbefalinger</a></li>
         <li><a href="#kontakt" class="nav-cta">Kontakt</a></li>
+        <li><a href="tel:+4542363474" class="nav-ring">Ring nu</a></li>
       </ul>
 
       <button class="nav-hamburger" id="hamburger" aria-label="Åbn menu" aria-expanded="false">
@@ -78,6 +113,7 @@
       <a href="#praktisk" role="menuitem">Praktisk info</a>
       <a href="#anbefalinger" role="menuitem">Anbefalinger</a>
       <a href="#kontakt" role="menuitem">Kontakt</a>
+      <a href="tel:+4542363474" role="menuitem">Ring nu – +45 42 36 34 74</a>
     </div>
   </nav>
 
@@ -116,11 +152,11 @@
 
         <div class="hero-media">
           <!-- Stort primært billede -->
-          <img class="hero-hoved-billede" src="assests/aktivitet-17.jpeg"
+          <img class="hero-hoved-billede" src="assets/img/aktivitet-17.jpeg"
             alt="Børn på eventyrlig udflugt i dagplejen hos Glæde og Vækst Pasning" />
 
           <!-- Lille overlappende billede -->
-          <img class="hero-lille-billede" src="assests/aktivitet-11.jpeg" alt="Kreativ leg og aktivitet i dagplejen"
+          <img class="hero-lille-billede" src="assets/img/aktivitet-11.jpeg" alt="Kreativ leg og aktivitet i dagplejen"
             aria-hidden="true" />
 
           <!-- Flydende ledige pladser-kort -->
@@ -151,7 +187,7 @@
     <div class="container">
       <div class="om-grid">
         <div class="om-billede-wrapper fade-op">
-          <img src="assests/aktivitet-04.jpeg" alt="Kærlig og nærværende stemning i dagplejen" />
+          <img src="assets/img/aktivitet-04.jpeg" alt="Kærlig og nærværende stemning i dagplejen" />
         </div>
 
         <div class="om-indhold">
@@ -308,29 +344,29 @@
           <p class="galleri-titel">Fra hverdagen</p>
 
           <div class="galleri-grid" id="galleri" role="list" aria-label="Fotogalleri fra hverdagen">
-            <img src="assests/aktivitet-05.jpeg" alt="Barn leger aktivt i dagplejen" role="listitem" tabindex="0" />
-            <img src="assests/aktivitet-06.jpeg" alt="Kreativ aktivitet med farverige materialer" role="listitem"
+            <img src="assets/img/aktivitet-05.jpeg" alt="Barn leger aktivt i privat pasningsordning i Bispebjerg" role="listitem" tabindex="0" />
+            <img src="assets/img/aktivitet-06.jpeg" alt="Kreativ aktivitet med farverige materialer i dagplejen Bispebjerg" role="listitem"
               tabindex="0" />
-            <img src="assests/aktivitet-07.jpeg" alt="Udeliv og frisk luft på legepladsen" role="listitem"
+            <img src="assets/img/aktivitet-07.jpeg" alt="Udeliv og frisk luft på legepladsen – privat pasningsordning Bispebjerg" role="listitem"
               tabindex="0" />
-            <img src="assests/aktivitet-08.jpeg" alt="Hyggelig samling og leg i dagplejen" role="listitem"
+            <img src="assets/img/aktivitet-08.jpeg" alt="Hyggelig samling og leg i privat pasningsordning Bispebjerg" role="listitem"
               tabindex="0" />
-            <img src="assests/aktivitet-09.jpeg" alt="Naturaktivitet og sanseleg" role="listitem" tabindex="0" />
-            <img src="assests/aktivitet-10.jpeg" alt="Spændende leg med klodser og byggematerialer" role="listitem"
+            <img src="assets/img/aktivitet-09.jpeg" alt="Naturaktivitet og sanseleg i privat pasningsordning Bispebjerg" role="listitem" tabindex="0" />
+            <img src="assets/img/aktivitet-10.jpeg" alt="Spændende leg med klodser og byggematerialer i dagplejen" role="listitem"
               tabindex="0" />
           </div>
 
           <div class="galleri-ekstra" id="galleri-ekstra" aria-label="Flere billeder fra hverdagen">
-            <img src="assests/aktivitet-11.jpeg" alt="Kreativ leg og tegning" tabindex="0" />
-            <img src="assests/aktivitet-12.jpeg" alt="Udforskning og nysgerrighed i leg" tabindex="0" />
-            <img src="assests/aktivitet-13.jpeg" alt="Sjov og aktiv udeleg" tabindex="0" />
-            <img src="assests/aktivitet-14.jpeg" alt="Fælles aktivitet og samvær" tabindex="0" />
-            <img src="assests/aktivitet-15.jpeg" alt="Motorisk leg og bevægelse" tabindex="0" />
-            <img src="assests/aktivitet-16.jpeg" alt="Rolig og koncentreret leg" tabindex="0" />
-            <img src="assests/aktivitet-17.jpeg" alt="Glæde og latter under leg" tabindex="0" />
-            <img src="assests/aktivitet-18.jpeg" alt="Sanselig og kreativ aktivitet" tabindex="0" />
-            <img src="assests/aktivitet-19.jpeg" alt="Natur og udeliv i nærområdet" tabindex="0" />
-            <img src="assests/aktivitet-20.jpeg" alt="Aktiv og oplevelsesrig dag i dagplejen" tabindex="0" />
+            <img src="assets/img/aktivitet-11.jpeg" alt="Kreativ leg og tegning i privat pasningsordning Bispebjerg" tabindex="0" />
+            <img src="assets/img/aktivitet-12.jpeg" alt="Udforskning og nysgerrighed i leg – Glæde og Vækst Pasning" tabindex="0" />
+            <img src="assets/img/aktivitet-13.jpeg" alt="Sjov og aktiv udeleg i privat pasningsordning Bispebjerg" tabindex="0" />
+            <img src="assets/img/aktivitet-14.jpeg" alt="Fælles aktivitet og samvær i dagplejen hos Glæde og Vækst Pasning" tabindex="0" />
+            <img src="assets/img/aktivitet-15.jpeg" alt="Motorisk leg og bevægelse i privat pasningsordning Bispebjerg" tabindex="0" />
+            <img src="assets/img/aktivitet-16.jpeg" alt="Rolig og koncentreret leg hos Glæde og Vækst Pasning" tabindex="0" />
+            <img src="assets/img/aktivitet-17.jpeg" alt="Glæde og latter under leg i privat pasningsordning Bispebjerg" tabindex="0" />
+            <img src="assets/img/aktivitet-18.jpeg" alt="Sanselig og kreativ aktivitet i dagplejen Bispebjerg" tabindex="0" />
+            <img src="assets/img/aktivitet-19.jpeg" alt="Natur og udeliv i nærområdet – privat pasningsordning Bispebjerg" tabindex="0" />
+            <img src="assets/img/aktivitet-20.jpeg" alt="Aktiv og oplevelsesrig dag i privat pasningsordning Bispebjerg" tabindex="0" />
           </div>
 
           <div class="galleri-vis-mere">
@@ -791,7 +827,7 @@
     <div class="container">
       <div class="footer-indre">
         <div class="footer-logo">
-          <img src="assests/logo.png" alt="Glæde og Vækst Pasning logo" />
+          <img src="assets/img/logo.png" alt="Glæde og Vækst Pasning logo" />
         </div>
         <div class="footer-tekst">
           <strong>Glæde og Vækst Pasning</strong>
